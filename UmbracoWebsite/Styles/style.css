@@ -1,0 +1,186 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  text-transform: lowercase;
+  font-family: "Open Sans";
+}
+.contentContainer {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 25px;
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  z-index: 10;
+  padding: 20px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.navigation ul {
+  color: white;
+  margin: 0 auto;
+  display: block;
+}
+.navigation ul li {
+  float: left;
+  list-style: none;
+  padding: 20px;
+}
+.navigation ul li:first-child {
+  padding-left: 0;
+}
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+.navigation a:hover {
+  text-decoration: underline;
+}
+.hero {
+  padding-top: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.hero img {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.hero .contentContainer {
+  position: absolute;
+  bottom: 20%;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.hero .heading {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px 20px 0 0;
+}
+.hero h1,
+.hero h2 {
+  color: white;
+  z-index: 1;
+  display: block;
+}
+.four-section {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+.four-section .section {
+  width: 25%;
+  float: left;
+  box-sizing: border-box;
+  height: 20vh;
+}
+.four-section .section a {
+  padding-top: 20px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.four-section .section i {
+  position: absolute;
+  font-size: 80px;
+  bottom: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 80px;
+}
+.smallHero {
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+.smallHero .contentContainer {
+  height: 100%;
+  z-index: 1;
+}
+.smallHero h2 {
+  padding-top: 200px;
+  color: white;
+}
+.smallHero h3 {
+  color: white;
+  font-weight: 100;
+}
+.smallHero img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.breadcrumb {
+  width: 100%;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 60px;
+  line-height: 30px;
+}
+.breadcrumb ul {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.breadcrumb ul li {
+  display: inline;
+  color: white;
+}
+.breadcrumb ul li a {
+  color: white;
+}
+.info {
+  border-bottom: 2px solid #009688;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+.info .author {
+  font-weight: bold;
+}
+.info .publishDate {
+  padding-left: 10px;
+}
+.blogBg {
+  background-color: #009688;
+  color: white;
+}
+.workBg {
+  background-color: #F44336;
+  color: white;
+}
+.cvBg {
+  background-color: #607D8B;
+  color: white;
+}
+.aboutBg {
+  background-color: #3F51B5;
+  color: white;
+}

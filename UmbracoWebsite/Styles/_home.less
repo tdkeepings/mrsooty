@@ -1,0 +1,79 @@
+﻿@import "_config";
+
+.hero {
+	padding-top: 100vh;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	img {
+		width: 100%;	
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 0;
+	}
+
+	.contentContainer {
+		position: absolute;
+		bottom: 20%;
+		z-index: 1;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+
+	.heading {
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 20px 20px 0 0;
+	}
+
+	h1, h2 {
+		color: white;
+		z-index: 1;
+		display: block;
+	}
+}
+
+.four-section {
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+
+	.section {
+		width: 25%;
+		float: left;
+		box-sizing: border-box;
+		height: 20vh;
+
+		a {
+			padding-top: 20px;
+			display: block;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			position: relative;
+
+		}
+
+		i {
+			position: absolute;
+			font-size: 80px;
+			bottom: 30%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 80px;
+		}
+	}
+
+}

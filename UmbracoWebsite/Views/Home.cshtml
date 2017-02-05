@@ -1,0 +1,44 @@
+﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@{
+	Layout = "Master.cshtml";
+
+	var backgroundUrl = Umbraco.Media(CurrentPage.mainBackground).Url;	
+}
+
+<div class="hero">
+	<div class="contentContainer">
+		<div class="heading">
+			<h1>@CurrentPage.MainHeading</h1>
+			<h2>@CurrentPage.SubHeading</h2>
+		</div>
+	</div>
+	<img src="@backgroundUrl" />
+</div>
+<div class="four-section">
+	<div class="section blogBg">
+		<a href="/Blog/">
+			Blog
+			<i class="material-icons">markunread_mailbox</i>
+		</a>
+	</div>
+	<div class="section aboutBg">
+		<a href="/About/">
+			About me
+			<i class="material-icons">help</i>
+		</a>
+	</div>
+	<div class="section workBg">
+		<a href="/Work/">
+			Work
+			<i class="material-icons">work</i>
+		</a>
+	</div>
+	<div class="section cvBg">
+		<a href="/Docs/CV">
+			My CV
+			<i class="material-icons">insert_drive_file</i>
+		</a>
+
+</div>
+</div>

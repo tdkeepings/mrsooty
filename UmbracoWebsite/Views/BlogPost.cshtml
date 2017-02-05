@@ -1,0 +1,25 @@
+﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogPost>
+@{
+	Layout = "Master.cshtml";
+
+}
+
+<div class="smallHero blogBg">
+	<div class="contentContainer">
+		<h2>@CurrentPage.Heading</h2>
+		<h3>@CurrentPage.Subtitle</h3>
+	</div>
+</div>
+
+<div class="content">
+	@Umbraco.RenderMacro("Breadcrumb")
+	<div class="contentContainer">
+		<div class="info">
+			<span class="author">Tom</span>
+			<span class="publishDate">@CurrentPage.UpdateDate.ToString("dd MMMM yyyy")</span>
+		</div>
+
+		@CurrentPage.Content
+	</div>
+</div>

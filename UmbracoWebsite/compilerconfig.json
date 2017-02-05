@@ -1,0 +1,5 @@
+[{
+	"outputFile":
+	 "Styles/style.css",
+	"inputFile": "Styles/style.less", "minify": { "enabled": true }, "includeInProject": true, "options": { "sourceMap": false }
+}]
