@@ -1,37 +1,29 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
+﻿@{
+	Layout = null;
+}<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Tom Keepings - MrSooty</title>
+	<meta name="viewport" content="width=device-width" />
+	<title>Tom Keepings - MrSooty</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="/Styles/style.css" />
-	<script type="text/javascript" src="/Scripts/script.js"></script>
 </head>
 <body>
 
-	@* If we're not at the root, render the navigation *@
-	@if (Request.Url.PathAndQuery != "/") {
-		<div class="navigation">
-			<div class="contentContainer">
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/blog/">Blog</a></li>
-					<li><a href="/about/">About</a></li>
-					<li><a href="/work/">Work</a></li>
-					<li><a href="/Docs/CV">cv</a></li>
-				</ul>
-			</div>
+	<div class="navigation">
+		<div class="contentContainer">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="/about/">About</a></li>
+				<li><a href="/work/">Work</a></li>
+				<li><a href="/">cv</a></li>
+			</ul>
 		</div>
-	}
+	</div>
 
-    @RenderBody()
+	@RenderBody()
 </body>
 </html>

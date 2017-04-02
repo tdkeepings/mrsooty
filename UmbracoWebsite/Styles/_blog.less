@@ -1,5 +1,52 @@
 ﻿@import "_config";
 
 .content {
+}
+
+.blog {
+	.contentContainer {
+		a {
+			margin-bottom: 10px;
+			padding: 30px 15px;
+			background-color: rgba(0,0,0,0.1);
+			color: #333;
+			text-decoration: none;
+			display: block;
+			overflow: hidden;
+
+			&:hover {
+				background-color: rgba(0,0,0,0.2);
+			}
+		}
+	}
+
+	.list-title {
+		line-height: 60px;
+		display: block;
+		float: left;
+		margin-left: 20px;
+	}
+}
+
+.dateStamp {
+	position: relative;
+	display: block;
+	width: 80px;
+	float: left;
+	color: #666;
+
+	.day {
+		font-size: 30px;
+		font-weight: bold;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.longDate {
+		text-align: center;
+		display: block;
+		width: 100%;
 	
+	}
 }

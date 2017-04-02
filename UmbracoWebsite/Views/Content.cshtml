@@ -1,0 +1,29 @@
+﻿@inherits UmbracoTemplatePage
+
+@{
+	Layout = "Master.cshtml";
+
+	var pageType = ViewBag.PageType;
+	var pageTypeClassname = pageType;
+	var pageTypeClassBg = pageType + "Bg";
+
+}
+
+<div class="smallHero @pageTypeClassBg">
+	<div class="contentContainer">
+		<h2>@ViewBag.PageTitle</h2>
+
+		@if(!string.IsNullOrEmpty(ViewBag.PageSubtitle)) {
+			<h3>@ViewBag.PageSubtitle</h3>
+		}
+	</div>
+</div>
+
+<div class="content @pageTypeClassname">
+	@Umbraco.RenderMacro("Breadcrumb")
+
+	<div class="contentContainer">
+
+		@RenderSection("MainContent")
+	</div>
+</div>

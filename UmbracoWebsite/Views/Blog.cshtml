@@ -1,24 +1,29 @@
 ﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogContainer>
-@{
-	Layout = "Master.cshtml";
-	
+
+@{ 
+	Layout = "Content.cshtml";
+	ViewBag.PageTitle = "Blog";
+	ViewBag.PageType = "blog";
+
+    var childrenInOrder = CurrentPage.Children().OrderBy("CreateDate desc");
 }
 
-<div class="smallHero blogBg">
-	<div class="contentContainer">
-		<h2>Blog</h2>
-	</div>
-</div>
+@section MainContent {
+	@foreach (var child in childrenInOrder) {
+        DateTime createDate = child.CreateDate;
+        var dayString = createDate.ToString("dd");
+        var longDateString = createDate.ToString("MMM-yy");
 
-<div class="content">
-	@Umbraco.RenderMacro("Breadcrumb")
-	
-	<div class="contentContainer">
-		@foreach (var child in CurrentPage.Children()) {
-			<a href="@child.Url">
-				@child.GetPropertyValue("heading")
-			</a>
-		}
-	</div>
-</div>
+		<a href="@child.Url">
+
+            <span class="dateStamp">
+                <span class="day">@dayString</span>
+                <span class="longDate">@longDateString</span>
+            </span>
+            <span class="list-title">
+                @child.GetPropertyValue("heading")
+            </span>
+		</a>
+	}
+}

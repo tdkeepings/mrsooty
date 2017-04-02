@@ -361,13 +361,35 @@
     <Content Include="Media\1005\tom-glasswall-1920x1080.jpg" />
     <Content Include="Media\1005\tom-glasswall-1920x1080_big-thumb.jpg" />
     <Content Include="Media\1005\tom-glasswall-1920x1080_thumb.jpg" />
+    <Content Include="Media\1006\wallhaven-401354.jpg" />
+    <Content Include="Media\1006\wallhaven-401354_big-thumb.jpg" />
+    <Content Include="Media\1006\wallhaven-401354_thumb.jpg" />
+    <Content Include="Media\1007\wallhaven-437226.jpg" />
+    <Content Include="Media\1007\wallhaven-437226_big-thumb.jpg" />
+    <Content Include="Media\1007\wallhaven-437226_thumb.jpg" />
+    <Content Include="Media\1008\wallhaven-481142.jpg" />
+    <Content Include="Media\1008\wallhaven-481142_big-thumb.jpg" />
+    <Content Include="Media\1008\wallhaven-481142_thumb.jpg" />
+    <Content Include="Media\1009\wallhaven-12343.jpg" />
+    <Content Include="Media\1009\wallhaven-12343_big-thumb.jpg" />
+    <Content Include="Media\1009\wallhaven-12343_thumb.jpg" />
+    <Content Include="Media\1010\wallhaven-12343.jpg" />
+    <Content Include="Media\1010\wallhaven-12343_thumb.jpg" />
+    <Content Include="Media\1011\wallhaven-481142.jpg" />
+    <Content Include="Media\1011\wallhaven-481142_thumb.jpg" />
+    <Content Include="Media\1012\wallhaven-401354.jpg" />
+    <Content Include="Media\1012\wallhaven-401354_thumb.jpg" />
+    <Content Include="Media\1013\img_2726_600x400.jpg" />
+    <Content Include="Media\1013\img_2726_600x400_thumb.jpg" />
     <Content Include="Styles\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
     <Content Include="Styles\style.min.css">
       <DependentUpon>style.css</DependentUpon>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -425,11 +447,16 @@
     <Content Include="Styles\_content.less" />
     <Content Include="Styles\_blog.less" />
     <Content Include="Views\MacroPartials\Breadcrumb.cshtml" />
+    <Content Include="Views\Content.cshtml" />
+    <Content Include="Views\About.cshtml" />
+    <Content Include="Views\WorkContainer.cshtml" />
+    <Content Include="Views\WorkItem.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

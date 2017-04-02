@@ -1,7 +1,6 @@
 ﻿* {
   margin: 0;
   padding: 0;
-  text-transform: lowercase;
   font-family: "Open Sans";
 }
 .contentContainer {
@@ -15,13 +14,13 @@ p {
   line-height: 25px;
 }
 .navigation {
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 60px;
   z-index: 10;
   padding: 20px 0;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
 }
 .navigation ul {
@@ -44,73 +43,88 @@ p {
 .navigation a:hover {
   text-decoration: underline;
 }
-.hero {
-  padding-top: 100vh;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-.hero img {
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-.hero .contentContainer {
-  position: absolute;
-  bottom: 20%;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.hero .heading {
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 20px 20px 0 0;
-}
-.hero h1,
-.hero h2 {
-  color: white;
-  z-index: 1;
-  display: block;
-}
 .four-section {
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
+  padding-top: 100px;
 }
-.four-section .section {
-  width: 25%;
+.section {
+  width: 50%;
+  height: calc(50vh - 50px);
+  min-height: 200px;
+  box-sizing: border-box;
   float: left;
-  box-sizing: border-box;
-  height: 20vh;
+  position: relative;
+  display: flex;
 }
-.four-section .section a {
-  padding-top: 20px;
-  display: block;
+.section a {
+  color: white;
+  z-index: 5;
+  text-decoration: none;
+  font-size: 30px;
   height: 100%;
   width: 100%;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  position: relative;
-}
-.four-section .section i {
+  z-index: 2;
   position: absolute;
-  font-size: 80px;
-  bottom: 30%;
-  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section a span {
+  margin-right: 10px;
+}
+.section .section-overlay {
+  height: 100%;
+  width: 100%;
+}
+.section.blogBg {
+  background-image: url('/media/1011/wallhaven-481142.jpg');
+  background-size: cover;
+}
+.section.blogBg .section-overlay {
+  background-color: rgba(0, 150, 136, 0.5);
+}
+.section.blogBg .section-overlay:hover {
+  background-color: rgba(0, 150, 136, 0.8);
+}
+.section.aboutBg {
+  background-image: url('/media/1003/tom-glasswall.jpg');
+  background-size: cover;
+}
+.section.aboutBg .section-overlay {
+  background-color: rgba(63, 81, 181, 0.5);
+}
+.section.aboutBg .section-overlay:hover {
+  background-color: rgba(63, 81, 181, 0.8);
+}
+.section.workBg {
+  background-image: url('/media/1013/img_2726_600x400.jpg');
+  background-size: cover;
+}
+.section.workBg .section-overlay {
+  background-color: rgba(244, 67, 54, 0.5);
+}
+.section.workBg .section-overlay:hover {
+  background-color: rgba(244, 67, 54, 0.8);
+}
+.section.cvBg {
+  background-image: url('/media/1010/wallhaven-12343.jpg');
+  background-size: cover;
+}
+.section.cvBg .section-overlay {
+  background-color: rgba(96, 125, 139, 0.5);
+}
+.section.cvBg .section-overlay:hover {
+  background-color: rgba(96, 125, 139, 0.8);
+}
+.bg-disclaimer {
+  position: absolute;
   right: 0;
-  margin: 0 auto;
-  width: 80px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+}
+.bg-disclaimer a {
+  color: white;
 }
 .smallHero {
   height: 350px;
@@ -183,4 +197,55 @@ p {
 .aboutBg {
   background-color: #3F51B5;
   color: white;
+}
+.content p {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.content ul {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+.content ul li {
+  margin-bottom: 10px;
+}
+.content .breadcrumb ul {
+  margin-left: auto;
+}
+.blog .contentContainer a {
+  margin-bottom: 10px;
+  padding: 30px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+}
+.blog .contentContainer a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.blog .list-title {
+  line-height: 60px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+}
+.dateStamp {
+  position: relative;
+  display: block;
+  width: 80px;
+  float: left;
+  color: #666;
+}
+.dateStamp .day {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.dateStamp .longDate {
+  text-align: center;
+  display: block;
+  width: 100%;
 }

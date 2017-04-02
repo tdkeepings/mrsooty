@@ -3,42 +3,44 @@
 @{
 	Layout = "Master.cshtml";
 
-	var backgroundUrl = Umbraco.Media(CurrentPage.mainBackground).Url;	
+	var backgroundUrl = Umbraco.Media(CurrentPage.mainBackground).Url;
 }
 
-<div class="hero">
-	<div class="contentContainer">
-		<div class="heading">
-			<h1>@CurrentPage.MainHeading</h1>
-			<h2>@CurrentPage.SubHeading</h2>
-		</div>
-	</div>
-	<img src="@backgroundUrl" />
-</div>
 <div class="four-section">
 	<div class="section blogBg">
-		<a href="/Blog/">
-			Blog
-			<i class="material-icons">markunread_mailbox</i>
-		</a>
+		<div class="section-overlay">
+			<a href="/Blog/">
+				<span>Blog</span>
+				<i class="material-icons">markunread_mailbox</i>
+			</a>
+		</div>
 	</div>
 	<div class="section aboutBg">
-		<a href="/About/">
-			About me
-			<i class="material-icons">help</i>
-		</a>
+		<div class="section-overlay">
+			<a href="/About/">
+				<span>About me</span>
+				<i class="material-icons">help</i>
+			</a>
+		</div>
 	</div>
 	<div class="section workBg">
-		<a href="/Work/">
-			Work
-			<i class="material-icons">work</i>
-		</a>
+		<div class="section-overlay">
+			<a href="/Work/">
+				<span>Work</span>
+				<i class="material-icons">work</i>
+			</a>
+		</div>
 	</div>
 	<div class="section cvBg">
-		<a href="/Docs/CV">
-			My CV
-			<i class="material-icons">insert_drive_file</i>
-		</a>
+		<div class="section-overlay">
+			<a href="/Docs/CV">
+				<span>My CV</span>
+				<i class="material-icons">insert_drive_file</i>
+			</a>
+		</div>
+	</div>
 
-</div>
+	<div class="bg-disclaimer">
+		<span>Background images probably from <a href="https://alpha.wallhaven.cc/">Wallhaven</a></span>
+	</div>
 </div>

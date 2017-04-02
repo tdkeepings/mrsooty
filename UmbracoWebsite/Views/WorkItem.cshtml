@@ -1,11 +1,11 @@
 ﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogPost>
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.WorkItem>
 
 @{
 	Layout = "Content.cshtml";
 	ViewBag.PageTitle = CurrentPage.Heading;
 	ViewBag.PageSubtitle = CurrentPage.Subtitle;
-	ViewBag.PageType = "blog";
+	ViewBag.PageType = "work";
 
 }
 
@@ -15,6 +15,4 @@
 		<span class="publishDate">@CurrentPage.UpdateDate.ToString("dd MMMM yyyy")</span>
 	</div>
 
-    @CurrentPage.Content
-    
 }
