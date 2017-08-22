@@ -1,37 +1,83 @@
 ﻿@import "_config";
 
 .navigation {
-	position: absolute;
-	top: 0;
-	height: 60px;
-	z-index: 10;
-	padding: 20px 0;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.7);
-	width: 100%;
-	
-	ul {
-		color: white;
-		margin: 0 auto;
-		display: block;
+    position: absolute;
+    top: 0;
+    height: 60px;
+    z-index: 10;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
 
-		li {
-			float: left;
-			list-style: none;
-			padding: 20px;
+    ul {
+        color: white;
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+        float: left;
+        padding-left: 5%;
 
-			&:first-child { 
-				padding-left: 0;
-			}
-		}
-	}
+        li {
+            float: left;
+            list-style: none;
+            padding: 20px 5px;
 
-	a {
-		color: white;
-		text-decoration: none;
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
 
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.siteHeading {
+    width: 40%;
+    float: left;
+    line-height: 60px;
+    font-size: 40px;
+    color: white;
+    font-family: 'Consolas';
+    text-align: left;
+}
+
+@media @tablet {
+    .siteHeading {
+        width: 25%;
+    }
+
+    .navigation {
+        ul {
+            width: 70%;
+
+            li {
+                padding: 20px 10px;
+            }
+        }
+    }
+}
+
+@media @desktop {
+    .siteHeading {
+        width: 10%;
+    }
+
+    .navigation {
+        ul {
+            width: 85%;
+
+            li {
+                padding: 20px;
+            }
+        }
+    }
 }

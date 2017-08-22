@@ -21,11 +21,20 @@
 	}
 
 	.list-title {
-		line-height: 60px;
+		line-height: 1.5;
 		display: block;
 		float: left;
 		margin-left: 20px;
+        max-width: 64%;
 	}
+}
+
+@media @tablet {
+    .blog {
+        .list-title {
+            max-width: 100%;
+        }
+    }
 }
 
 .dateStamp {

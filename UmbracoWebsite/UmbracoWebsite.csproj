@@ -381,6 +381,7 @@
     <Content Include="Media\1012\wallhaven-401354_thumb.jpg" />
     <Content Include="Media\1013\img_2726_600x400.jpg" />
     <Content Include="Media\1013\img_2726_600x400_thumb.jpg" />
+    <Content Include="Styles\CodeEditor.css" />
     <Content Include="Styles\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
@@ -451,6 +452,7 @@
     <Content Include="Views\About.cshtml" />
     <Content Include="Views\WorkContainer.cshtml" />
     <Content Include="Views\WorkItem.cshtml" />
+    <Content Include="Views\MacroPartials\CodeSnippet.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
