@@ -283,3 +283,6 @@ __pycache__/
 Umbraco/
 Umbraco_Client/
 App_Data/
+.vscode/settings.json
+UmbracoWebsite/Styles/style.css
+UmbracoWebsite/Styles/style.css.map

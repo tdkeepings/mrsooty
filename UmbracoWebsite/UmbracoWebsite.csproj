@@ -452,6 +452,9 @@
     <Content Include="Views\About.cshtml" />
     <Content Include="Views\WorkContainer.cshtml" />
     <Content Include="Views\WorkItem.cshtml" />
+    <Content Include="Content/highlighterjs/highlight.pack.js" />
+    <Content Include="Content/highlighterjs/vs2015.css" />
+    <Content Include="Views\WorkItem.cshtml" />
     <Content Include="Views\MacroPartials\CodeSnippet.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
