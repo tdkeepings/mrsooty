@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/Styles/style.css" />
-    <link href="/Content/highlighterjs/vs2015.css" />
+    <link rel="stylesheet" href="/Content/highlighterjs/vs2015.css" />
     <script type="text/javascript" src="/Content/highlighterjs/highlight.pack.js"></script>
 </head>
 <body>
@@ -23,16 +23,18 @@
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/about/">About</a></li>
                 <li><a href="/work/">Work</a></li>
-                <li><a href="/">cv</a></li>
+                <li><a href="/">CV</a></li>
             </ul>
         </div>
     </div>
 
     @RenderBody()
 
+    @if(Request.Url.GetSafeAbsolutePath() != "/") { 
     <div class="footer">
         &nbsp;
     </div>
+    }
 
     <script>
         hljs.initHighlightingOnLoad();
