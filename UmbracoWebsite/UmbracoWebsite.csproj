@@ -346,6 +346,7 @@
     <Content Include="Config\Lang\ru-RU.user.xml" />
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
+    <Content Include="Content\2016.jpg" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Media\1001\wallhaven-293402.jpg" />

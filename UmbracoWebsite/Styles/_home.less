@@ -1,67 +1,48 @@
 ﻿@import "_config";
 
 .four-section {
-	padding-top: 100px;
+    padding-top: 100px;
     position: relative;
     overflow: hidden;
 }
 
 .section {
-	width: 100%;
-	height: ~"calc(50vh - 50px)";
-	min-height: 200px;
-	box-sizing: border-box;
-	float: left;
-	position: relative;
-	display: flex;
+    width: 100%;
+    height: ~"calc(50vh - 50px)";
+    min-height: 200px;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    display: flex;
 
-	a {
-		color: white;
-		z-index: 5;
-		text-decoration: none;
-		font-size: 30px;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		position: absolute;
-		top: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+    a {
+        color: white;
+        z-index: 5;
+        text-decoration: none;
+        font-size: 30px;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-		span {
-			margin-right: 10px;
-		}
-	}
+        span {
+            margin-right: 10px;
+        }
+    }
 
-	.section-overlay {
-		height: 100%;
-		width: 100%;
-	}
+    .section-overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.3);
 
-	&.blogBg {
-		background-image: url('/media/1014/blog-begin.jpg');
-		background-size: cover;
-		.mixin_section-overlay(@blogTealOverlay, @blogTealOverlayHard);
-	}
-
-	&.aboutBg {
-		background-image: url('/media/1003/tom-glasswall.jpg');
-		background-size: cover;
-		.mixin_section-overlay(@aboutIndigoOverlay, @aboutIndigoOverlayHard);
-	}
-
-	&.workBg {
-		background-image: url('/media/1013/img_2726_600x400.jpg');
-		background-size: cover;
-		.mixin_section-overlay(@workRedOverlay, @workRedOverlayHard);
-	}
-
-	&.cvBg {
-		background-image: url('/media/1010/wallhaven-12343.jpg');
-		background-size: cover;
-		.mixin_section-overlay(@cvSteelOverlay, @cvSteelOverlayHard);
-	}
+        &:hover {
+            background-color: rgba(0,0,0,0.2);    
+        }
+    }
 }
 
 @media @tablet {
@@ -71,26 +52,25 @@
 }
 
 .bg-disclaimer {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0,0.9);
-	z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 10;
     color: white;
 
-	a {
-		color: white;
-	}
+    a {
+        color: white;
+    }
 }
 
 .mixin_section-overlay(@colourOverlay, @colour) {
 
-	.section-overlay {
-		background-color: @colourOverlay;
+    .section-overlay {
+        background-color: @colourOverlay;
 
-		&:hover {
-			background-color: @colour;
-		}
-	}
+        &:hover {
+            background-color: @colour;
+        }
+    }
 }
-

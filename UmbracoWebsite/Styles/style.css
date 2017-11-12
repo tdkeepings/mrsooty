@@ -124,46 +124,10 @@ p {
 .section .section-overlay {
   height: 100%;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-.section.blogBg {
-  background-image: url('/media/1014/blog-begin.jpg');
-  background-size: cover;
-}
-.section.blogBg .section-overlay {
-  background-color: rgba(0, 150, 136, 0.5);
-}
-.section.blogBg .section-overlay:hover {
-  background-color: rgba(0, 150, 136, 0.8);
-}
-.section.aboutBg {
-  background-image: url('/media/1003/tom-glasswall.jpg');
-  background-size: cover;
-}
-.section.aboutBg .section-overlay {
-  background-color: rgba(63, 81, 181, 0.5);
-}
-.section.aboutBg .section-overlay:hover {
-  background-color: rgba(63, 81, 181, 0.8);
-}
-.section.workBg {
-  background-image: url('/media/1013/img_2726_600x400.jpg');
-  background-size: cover;
-}
-.section.workBg .section-overlay {
-  background-color: rgba(244, 67, 54, 0.5);
-}
-.section.workBg .section-overlay:hover {
-  background-color: rgba(244, 67, 54, 0.8);
-}
-.section.cvBg {
-  background-image: url('/media/1010/wallhaven-12343.jpg');
-  background-size: cover;
-}
-.section.cvBg .section-overlay {
-  background-color: rgba(96, 125, 139, 0.5);
-}
-.section.cvBg .section-overlay:hover {
-  background-color: rgba(96, 125, 139, 0.8);
+.section .section-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 800px) {
   .section {
@@ -206,6 +170,18 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
+}
+img.circle {
+  border-radius: 50%;
+}
+img.profilePicture {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 225px;
+  display: block;
+  left: auto;
 }
 @media screen and (min-width: 800px) {
   .smallHero {

@@ -16,6 +16,10 @@
 		@if(!string.IsNullOrEmpty(ViewBag.PageSubtitle)) {
 			<h3>@ViewBag.PageSubtitle</h3>
 		}
+
+        @if(pageType == "about") {
+            <img src="~/Content/2016.jpg" class="circle profilePicture"/>
+        }
 	</div>
 </div>
 
