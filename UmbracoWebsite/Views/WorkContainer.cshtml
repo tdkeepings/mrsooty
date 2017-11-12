@@ -2,12 +2,28 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.WorkContainer>
 
 @{
-	Layout = "Content.cshtml";
-	ViewBag.PageTitle = CurrentPage.Heading;
-	ViewBag.PageType = "work";
+    Layout = "Content.cshtml";
+    ViewBag.PageTitle = CurrentPage.Heading;
+    ViewBag.PageType = "work";
+
+    var childrenInOrder = CurrentPage.Children().OrderBy("CreateDate desc");
 
 }
 
 @section MainContent {
-	
+	@foreach (var child in childrenInOrder) {
+        DateTime createDate = child.CreateDate;
+        var dayString = createDate.ToString("dd");
+        var longDateString = createDate.ToString("MMM-yy");
+
+        <a class="largeLink" href="@child.Url">
+            <span class="dateStamp">
+                <span class="day">@dayString</span>
+                <span class="longDate">@longDateString</span>
+            </span>
+            <span class="list-title">
+                @child.GetPropertyValue("heading")
+            </span>
+        </a>
+    }
 }

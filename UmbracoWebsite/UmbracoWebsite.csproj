@@ -456,6 +456,7 @@
     <Content Include="Views\WorkItem.cshtml" />
     <Content Include="Views\MacroPartials\CodeSnippet.cshtml" />
     <Content Include="Styles\_footer.less" />
+    <Content Include="Views\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

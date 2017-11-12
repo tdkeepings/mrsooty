@@ -1,0 +1,10 @@
+﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Contact>
+@{
+    Layout = "Content.cshtml";
+    ViewBag.PageTitle = "Contact";
+    ViewBag.PageType = "contact";
+}
+@section MainContent {
+    @Html.Raw(Model.Content.Content)
+}
