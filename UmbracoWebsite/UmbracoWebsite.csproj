@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -347,6 +348,8 @@
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
     <Content Include="Content\2016.jpg" />
+    <Content Include="Content\highlighterjs\highlight.pack.js" />
+    <Content Include="Content\highlighterjs\vs2015.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Media\1001\wallhaven-293402.jpg" />
@@ -382,7 +385,6 @@
     <Content Include="Media\1012\wallhaven-401354_thumb.jpg" />
     <Content Include="Media\1013\img_2726_600x400.jpg" />
     <Content Include="Media\1013\img_2726_600x400_thumb.jpg" />
-    <Content Include="Styles\CodeEditor.css" />
     <Content Include="Styles\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
@@ -401,7 +403,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -414,7 +415,6 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
-    <Content Include="Media\Web.config" />
     <Content Include="Config\UrlRewriting.config" />
     <Content Include="Config\umbracoSettings.config" />
     <Content Include="Config\trees.config" />
@@ -453,7 +453,9 @@
     <Content Include="Views\About.cshtml" />
     <Content Include="Views\WorkContainer.cshtml" />
     <Content Include="Views\WorkItem.cshtml" />
+    <Content Include="Views\WorkItem.cshtml" />
     <Content Include="Views\MacroPartials\CodeSnippet.cshtml" />
+    <Content Include="Styles\_footer.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
