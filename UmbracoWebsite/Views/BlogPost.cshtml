@@ -2,19 +2,23 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogPost>
 
 @{
-	Layout = "Content.cshtml";
-	ViewBag.PageTitle = CurrentPage.Heading;
-	ViewBag.PageSubtitle = CurrentPage.Subtitle;
-	ViewBag.PageType = "blog";
+    Layout = "Content.cshtml";
+    ViewBag.PageTitle = CurrentPage.Heading;
+    ViewBag.PageSubtitle = CurrentPage.Subtitle;
+    ViewBag.PageType = "blog";
 
 }
 
 @section MainContent {
-	<div class="info">
-		<span class="author">Tom</span>
-		<span class="publishDate">@CurrentPage.UpdateDate.ToString("dd MMMM yyyy")</span>
-	</div>
 
-    @CurrentPage.Content
-    
+    <div class="col-sm-8 offset-sm-1">
+        <div class="blog-info faded">
+            <span class="author">Tom</span>
+            <span class="publishDate">@CurrentPage.UpdateDate.ToString("dd MMMM yyyy")</span>
+        </div>
+        @CurrentPage.Content
+    </div>
+
+
+
 }

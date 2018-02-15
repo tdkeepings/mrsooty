@@ -2,11 +2,24 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.About>
 
 @{
-	Layout = "Content.cshtml";
-	ViewBag.PageTitle = "About";
-	ViewBag.PageType = "about";
+    Layout = "Content.cshtml";
+    ViewBag.PageTitle = "About";
+    ViewBag.PageType = "about";
+
+    ViewBag.ShowTitle = false;
 }
 
 @section MainContent {
-	@Html.Raw(Model.Content.Content)
+    <div class="row">
+        <div class="col-md-3">
+            <img src="~/Content/profilePicture.jpg" class="circle profilePicture" />
+            <div class="social">
+                <a class="with-icon twitter" target="_blank" href="https://www.twitter.com/MisterSooty">@@MisterSooty</a>
+                <a class="with-icon github" target="_blank" href="https://www.github.com/tdkeepings">GitHub</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+	        @Html.Raw(Model.Content.Content)
+        </div>
+    </div>
 }

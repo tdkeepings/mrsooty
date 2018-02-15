@@ -1,33 +1,29 @@
-﻿// main: style.less 
-@import "_config.less";
-
-* {
-	margin: 0;
-	padding: 0;
-	font-family: "Open Sans";
+﻿html, body {
+    height: 100%;
 }
 
-.contentContainer, .breadcrumb ul {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
+body {
+    background-color: #efefef;
 }
 
-@media @tablet {
-    .contentContainer, .breadcrumb ul {
-	    width: 700px;
-    }
+.site-wrapper-inner {
+    padding-top: 90px;
 }
 
-@media @desktop {
-    .contentContainer, .breadcrumb ul {
-        width: 1200px;
-    }
+.circle {
+    border-radius: 50%;
 }
 
+.profilePicture {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+}
 
-p {
-	margin-bottom: 10px;
-	font-size: 16px;
-	line-height: 25px;
+a {
+    color: #333;
+}
+
+.faded {
+    opacity: 0.5;
 }

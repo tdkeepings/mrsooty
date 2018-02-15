@@ -7,23 +7,30 @@
     ViewBag.PageType = "work";
 
     var childrenInOrder = CurrentPage.Children().OrderBy("CreateDate desc");
-
+    var featureIsLive = false;
 }
 
 @section MainContent {
-	@foreach (var child in childrenInOrder) {
-        DateTime createDate = child.CreateDate;
-        var dayString = createDate.ToString("dd");
-        var longDateString = createDate.ToString("MMM-yy");
+    <div class="col-sm-8 offset-sm-1">
+        @if (featureIsLive) {
+        foreach (var child in childrenInOrder) {
+            DateTime createDate = child.CreateDate;
+            var dayString = createDate.ToString("dd");
+            var longDateString = createDate.ToString("MMM-yy");
 
-        <a class="largeLink" href="@child.Url">
-            <span class="dateStamp">
-                <span class="day">@dayString</span>
-                <span class="longDate">@longDateString</span>
-            </span>
-            <span class="list-title">
-                @child.GetPropertyValue("heading")
-            </span>
-        </a>
-    }
+                <a class="largeLink" href="@child.Url">
+                    <span class="dateStamp">
+                        <span class="day">@dayString</span>
+                        <span class="longDate">@longDateString</span>
+                    </span>
+                    <span class="list-title">
+                        @child.GetPropertyValue("heading")
+                    </span>
+                </a>
+            }
+        }
+        else {
+            <p>Page still under development.</p>
+        }
+    </div>
 }

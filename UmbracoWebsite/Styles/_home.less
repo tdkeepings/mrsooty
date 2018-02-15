@@ -1,77 +1,47 @@
-﻿// main: style.less 
-@import "_config";
-
-.four-section {
-    padding-top: 100px;
-    position: relative;
-    overflow: hidden;
-}
-
-.section {
-    width: 100%;
-    height: ~"calc(50vh - 50px)";
-    min-height: 200px;
-    box-sizing: border-box;
-    float: left;
-    position: relative;
+﻿.cover {
+    height: 100vh;
+    min-height: 300px;
     display: flex;
 
-    a {
-        color: white;
-        z-index: 5;
-        text-decoration: none;
-        font-size: 30px;
-        height: 100%;
-        width: 100%;
-        z-index: 2;
-        position: absolute;
-        top: 0;
+    .container {
+        margin: auto !important;
+    }
+
+    .row {
+        text-align: center;
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        span {
-            margin-right: 10px;
-        }
-    }
-
-    .section-overlay {
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0,0,0,0.3);
-
-        &:hover {
-            background-color: rgba(0,0,0,0.2);    
-        }
-    }
+        flex-wrap: wrap;
+    }   
 }
 
-@media @tablet {
-    .section {
-        width: 50%;
-    }
-}
-
-.bg-disclaimer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.9);
-    z-index: 10;
-    color: white;
-
+.home {
     a {
-        color: white;
+        color: #efefef;
+        font-weight: bold;
+        display: block;
+        box-sizing: border-box;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .profilePicture {
+        height: 300px;
+        width: 300px;
     }
 }
 
-.mixin_section-overlay(@colourOverlay, @colour) {
+.site-wrapper.home {
+    height: 100%;
+    background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-589038.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    .section-overlay {
-        background-color: @colourOverlay;
-
-        &:hover {
-            background-color: @colour;
-        }
-    }
+.site-wrapper.home .site-wrapper-inner {
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    padding: 0;
 }

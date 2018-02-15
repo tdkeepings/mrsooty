@@ -348,8 +348,12 @@
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
     <Content Include="Content\2016.jpg" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\profilePicture.jpg" />
     <Content Include="Content\highlighterjs\highlight.pack.js" />
     <Content Include="Content\highlighterjs\vs2015.css" />
+    <Content Include="Content\social\GitHub.png" />
+    <Content Include="Content\social\Twitter.svg" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Media\1001\wallhaven-293402.jpg" />
@@ -440,14 +444,8 @@
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Styles\style.less" />
-    <Content Include="Styles\_config.less" />
-    <Content Include="Styles\_base.less" />
-    <Content Include="Styles\_home.less" />
-    <Content Include="Styles\_navigation.less" />
     <Content Include="Views\Blog.cshtml" />
     <Content Include="Views\BlogPost.cshtml" />
-    <Content Include="Styles\_content.less" />
-    <Content Include="Styles\_blog.less" />
     <Content Include="Views\MacroPartials\Breadcrumb.cshtml" />
     <Content Include="Views\Content.cshtml" />
     <Content Include="Views\About.cshtml" />
@@ -455,8 +453,13 @@
     <Content Include="Views\WorkItem.cshtml" />
     <Content Include="Views\WorkItem.cshtml" />
     <Content Include="Views\MacroPartials\CodeSnippet.cshtml" />
-    <Content Include="Styles\_footer.less" />
     <Content Include="Views\Contact.cshtml" />
+    <Content Include="Styles\_base.less" />
+    <Content Include="Styles\_header.less" />
+    <Content Include="Styles\_home.less" />
+    <Content Include="Styles\_footer.less" />
+    <Content Include="Styles\_nav.less" />
+    <Content Include="Styles\_content.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -467,9 +470,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />

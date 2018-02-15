@@ -1,29 +1,45 @@
 ﻿@using ContentModels = Umbraco.Web.PublishedContentModels;
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogContainer>
 
-@{ 
-	Layout = "Content.cshtml";
-	ViewBag.PageTitle = "Blog";
-	ViewBag.PageType = "blog";
+@{
+    Layout = "Content.cshtml";
+    ViewBag.PageTitle = "Blog";
+    ViewBag.PageType = "blog";
 
     var childrenInOrder = CurrentPage.Children().OrderBy("CreateDate desc");
 }
 
 @section MainContent {
-	@foreach (var child in childrenInOrder) {
+    @{
+        var previousYear = -1;
+    }
+    @foreach (var child in childrenInOrder) {
         DateTime createDate = child.CreateDate;
-        var dayString = createDate.ToString("dd");
-        var longDateString = createDate.ToString("MMM-yy");
+        var dayString = createDate.ToString("dd MMM");
+        var longDateString = createDate.ToString("yyyy");
+        
+            <div class="col-sm-8 offset-sm-1">
+                @if (previousYear == -1 || previousYear != createDate.Year) {
+                    <span class="faded">@createDate.Year</span>
 
-		<a class="largeLink" href="@child.Url">
+                    previousYear = createDate.Year;
+                }
 
-            <span class="dateStamp">
-                <span class="day">@dayString</span>
-                <span class="longDate">@longDateString</span>
-            </span>
-            <span class="list-title">
-                @child.GetPropertyValue("heading")
-            </span>
-		</a>
-	}
+                <a class="box" href="@child.Url">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="dateStamp">
+                                <span class="day">@dayString</span>
+                                <span class="longDate">@longDateString</span>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">
+                            <h4>@child.GetPropertyValue("heading")</h4>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+
+    }
 }
