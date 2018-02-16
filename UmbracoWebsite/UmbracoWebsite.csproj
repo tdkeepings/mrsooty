@@ -439,8 +439,6 @@
     <Content Include="compilerconfig.json.bindings">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\mrsooty-web - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\mrsooty-web - Web Deploy.pubxml" />
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Styles\style.less" />
@@ -460,6 +458,8 @@
     <Content Include="Styles\_footer.less" />
     <Content Include="Styles\_nav.less" />
     <Content Include="Styles\_content.less" />
+    <None Include="Properties\PublishProfiles\tomkeepings - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tomkeepings - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -11,14 +11,14 @@
 
 @section MainContent {
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-10 offset-xs-1 offset-md-0">
             <img src="~/Content/profilePicture.jpg" class="circle profilePicture" />
             <div class="social">
                 <a class="with-icon twitter" target="_blank" href="https://www.twitter.com/MisterSooty">@@MisterSooty</a>
                 <a class="with-icon github" target="_blank" href="https://www.github.com/tdkeepings">GitHub</a>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-10 offset-xs-1 offset-md-0">
 	        @Html.Raw(Model.Content.Content)
         </div>
     </div>

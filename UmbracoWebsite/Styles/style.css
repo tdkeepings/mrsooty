@@ -5,16 +5,14 @@ body {
 body {
   background-color: #efefef;
 }
-.site-wrapper-inner {
-  padding-top: 90px;
-}
 .circle {
   border-radius: 50%;
 }
 .profilePicture {
-  width: 200px;
-  height: 200px;
+  width: 100%;
   border: 5px solid white;
+  display: block;
+  margin: 0 auto;
 }
 a {
   color: #333;
@@ -22,9 +20,11 @@ a {
 .faded {
   opacity: 0.5;
 }
+.smallHero {
+  padding-top: 40px;
+}
 .cover {
-  height: 100vh;
-  min-height: 300px;
+  min-height: 100vh;
   display: flex;
 }
 .cover .container {
@@ -50,14 +50,12 @@ a {
   width: 300px;
 }
 .site-wrapper.home {
-  height: 100%;
   background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-589038.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .site-wrapper.home .site-wrapper-inner {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
   padding: 0;
 }
 nav ul {
@@ -93,6 +91,7 @@ nav a:hover {
 }
 .navbar {
   background-color: #333;
+  border-radius: 0;
 }
 .content {
   margin-top: 50px;
